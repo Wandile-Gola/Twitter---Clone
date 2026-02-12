@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* fixthe font */
+body {
+    overflow: hidden;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+/* SIDEBAR */
+.sidebar {
+    width: 280px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    border-right: 1px solid #eff3f4;
+    padding: 10px 15px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Logo */
+.logo{
+    padding:10px 40px;
+}
+.logo img {
+    height: 26px;
+    /* margin-left: 80px; */
+}
+
+/* Categories */
+.category-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.category {
+    margin: 5px 20px;
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 30px;
+    font-weight: 400;
+    transition: 0.3s;
+}
+
+.category i {
+    margin-right: 20px;
+    font-size: 30px;
+}
+
+.category:hover {
+    background-color: rgba(193, 187, 187, 0.2);
+}
+
+.active {
+    font-weight: 700;
+}
+
+/* Post Button */
+.post-btn {
+    margin-top: 15px;
+    padding: 12px 0px;
+    border: none;
+    border-radius: 30px;
+    background-color: #000;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.post-btn:hover {
+    background-color: #272c30;
+}
+
+/*sidebar footer  */
+.sidebar-footer {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    padding: 10px 12px 12px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.sidebar-footer:hover {
+    background-color: rgba(193, 187, 187, 0.2);
+ }
+
+.sidebar-footer img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.footer-info h4 {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.footer-info p {
+    font-size: 13px;
+    color: gray;
+    margin: 0;
+}
+
+.sidebar-footer i {
+    margin-left: auto;
+}
+
+/* feed area*/
+.feed {
+    margin-left: 280px;
+    padding: 20px;
+    height: 100vh;
+    overflow-y: auto;
+}
