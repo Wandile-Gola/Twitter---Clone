@@ -6,15 +6,11 @@
     .layout {
         width: 1300px;
         margin: 0 auto;
-    }
-
+    } 
     .feed {
         width: 650px;
     }
-
-    /* .right-sidebar {
-        display: block;
-    } */
+   
 }
 /* Laptop responsive */
 @media (max-width: 1024px) and (min-width: 1399px) {

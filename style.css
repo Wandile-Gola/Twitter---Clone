@@ -154,6 +154,31 @@ html, body {
     align-items: center;
     justify-content: space-between;
 }
+.tweet-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #eff3f4;
+    padding-top: 10px;
+}
+
+.toolbar-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.toolbar-icons i {
+    font-size: 20px;
+    color: #1d9bf0;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 50%;
+    transition: 0.2s;
+}
+
+.toolbar-icons i:hover {
+    background-color: rgba(29, 155, 240, 0.1);
+}
 
 /* Star Icon */
 .star-icon {
@@ -294,8 +319,13 @@ html, body {
 }
 
 .tweet-actions i:hover {
-    color: black;
+    color: rgb(79, 131, 243);
 }
+
+.tweet-actions i#like:hover {
+    color: #ce2666;
+}
+
 
 /* Right sidebar section */
 
@@ -315,7 +345,6 @@ html, body {
     padding: 10px 15px;
     border-radius: 25px;
     border: 1px solid #eff3f4;
-    background-color: #f7f9f9;
     outline: none;
 }
 .search-box{
@@ -336,7 +365,6 @@ html, body {
 /* Trends section */
 
 .trends {
-    background-color: #f7f9f9;
     border-radius: 16px;
     padding: 16px;
     margin: 15px;
@@ -344,6 +372,7 @@ html, body {
 
 /* Header */
 .trends-header {
+    position: sticky;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -402,7 +431,6 @@ html, body {
 /* Whot to follow section*/
 
 .who-to-follow {
-    background-color: #f7f9f9;
     border-radius: 16px;
     padding: 18px;
     margin: 15px;
@@ -490,4 +518,203 @@ html, body {
 .twitter-footer span {
     width: 100%;
     margin-top: 5px;
+}
+
+.tweet-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    display: none;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 80px;
+    z-index: 2000;
+}
+
+.tweet-modal.active {
+    display: flex;
+}
+
+.modal-content {
+    background: white;
+    width: 600px;
+    max-width: 90%;
+    min-height: 350px;
+    border-radius: 16px;
+    padding: 15px 20px;
+    animation: modalFade 0.2s ease;
+}
+
+@keyframes modalFade {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.modal-header {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.close-btn {
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 50%;
+}
+
+.close-btn:hover {
+    background-color: #f0f0f0;
+}
+
+.modal-body {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.modal-body img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+.modal-input {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.modal-input input {
+    border: none;
+    outline: none;
+    font-size: 20px;
+}
+
+
+/* explore page */
+
+.explore-section {
+    padding: 20px;
+    border-bottom: 1px solid #eff3f4;
+}
+
+.explore-section h4 {
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.explore-trend {
+    padding: 12px 0;
+    cursor: pointer;
+}
+
+.explore-trend h5 {
+    margin: 3px 0;
+}
+
+.explore-trend span {
+    font-size: 13px;
+    color: gray;
+}
+
+.explore-trend:hover {
+    background-color: #f7f9f9;
+}
+
+.news-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    cursor: pointer;
+}
+
+.news-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 12px;
+}
+
+.news-card:hover {
+    background-color: #f7f9f9;
+}
+
+/* explore tabs */
+
+.explore-tabs {
+    display: flex;
+    justify-content: space-around;
+    font-weight: 600;
+}
+
+.explore-tab {
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+    cursor: pointer;
+}
+
+.explore-tab:hover {
+    background-color: #f7f9f9;
+}
+
+.active-explore {
+    font-weight: 700;
+    color: black
+}
+
+.explore-content {
+    padding: 20px;
+}
+
+.hidden {
+    display: none;
+}
+.category {
+    text-decoration: none;
+    color: black;
+}
+
+.category:visited {
+    color: black;
+}
+
+.category:hover {
+    text-decoration: none;
+    color: black;
+}
+
+.category.active {
+    color: black;
+}
+#trend-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.trends-foryou{
+    border-top: #595a5c41 solid 1px;
+}
+
+#trend-item:hover {
+    background-color: #f7f9f9;
+}
+#trends {
+    /* background-color: #f7f9f9; */
+    border-radius: 16px;
+}
+#who-to-follow {
+    border-radius: 16px;
+    padding: 18px 0;
+    margin: 15px 0;
+    border: 1px solid #eff3f4;
 }

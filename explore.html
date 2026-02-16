@@ -2,36 +2,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>Explore | Twitter Clone</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-
-    <title>Twitter | Clone</title>
 
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./responsive.css">
-    <!-- Bootstrap icons or fonts??? -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="icon" href="./assets/favicon.png">
 </head>
 
 <body>
-    <div class="layout"> 
-         <div class="sidebar">
-            <div class="logo">
-            <img src="./assets/logo1.png" alt="twitter logo">
-            </div>
-            <div class="category-section">
-            <span class="category active">
+
+<div class="layout">
+
+<!-- sidebar -->
+    <div class="sidebar">
+        <div class="logo">
+            <img src="./assets/logo1.png" alt="logo">
+        </div>
+
+        <div class="category-section">
+            <a href="index.html" class="category">
                 <i class="material-icons">home_filled</i>
                 Home
-            </span>
-            <a href="explore.html"  class="category">
-                <i  class="material-icons">search</i>
+            </a>
+
+            <a href="explore.html" class="category active">
+                <i class="material-icons">search</i>
                 Explore
             </a>
+
             <span class="category">
                 <i class="material-icons">notifications_none</i>
                 Notifications
@@ -70,237 +70,125 @@
 
         <i class="material-icons">more_horiz</i>
         </div>
- 
+        
     </div>
 
+<!-- main content -->
     <div class="main-content">
+
     <div class="feed">
 
-    <!-- Header -->
     <div class="feed-header">
-        <div class="feed-tabs">
-            <span class="tab active-tab">Home</span>
-            <span class="tab">Following</span>
+        <div class="explore-tabs">
+            <span class="explore-tab active-explore" data-tab="forYou">For You</span>
+            <span class="explore-tab" data-tab="trending">Trending</span>
+            <span class="explore-tab" data-tab="news">News</span>
+            <span class="explore-tab" data-tab="sports">Sports</span>
         </div>
     </div>
 
-    <!-- Tweet Composer -->
-    <div class="tweet-box">
-        <img src="./assets/profile.jpg" alt="profile">
-        <div class="tweet-input">
-            <div class="tweet-top">
-                <input type="text" placeholder="What's happening?">
-                <i class="material-icons star-icon">auto_awesome</i>
+ <!-- for you page -->
+    <div class="explore-content" id="forYou">
+        <div class="trends-header">
+            <h4>Today's News</h4>
+        </div>
+        <div class="explore-trend">
+            <h4>Construction manager Dares Ramaphosa's Labour Inspectors in Viral Video</h4>
+            <span> 1 day · Other · 25.2K posts</span>
+        </div>
+
+        <div class="explore-trend">
+            <h4>Pietermaritzburg Son Refuses to Claim Abusive Father's Body</h4>
+            <span>Treding now · News · 9,850 posts</span>
+        </div>
+        <div class="explore-trend">
+            <h4>South Africa's Inflation Rate Hits 6.5% in May</h4>
+            <span>Trending now · Economy · 15K posts</span>
+        </div>
+        <div class="trends-foryou">
+        <div id="trend-item">
+            <div class="trend-info">
+                <p>Trending in South Africa</p>
+                <h5>Wandile Gola</h5>
             </div>
-            <div class="tweet-toolbar">
-        <div class="toolbar-icons">
-            <i class="material-icons">image</i>
-            <i class="material-icons">gif_box</i>
-            <i class="material-icons">poll</i>
-            <i class="material-icons">sentiment_satisfied_alt</i>
-            <i class="material-icons">location_on</i>
+            <i class="material-icons">more_horiz</i>
         </div>
-            <button class="tweet-btn" id="feedTweetBtn">Tweet</button>
+        <div id="trend-item">
+            <div class="trend-info">
+                <p>Trending in South Africa</p>
+                <h5>Zaio University of Technology</h5>
+            </div>
+            <i class="material-icons">more_horiz</i>
         </div>
+        <div id="trend-item">
+            <div class="trend-info">
+                <p>Trending in South Africa</p>
+                <h5>1st Leading Bootcamp</h5>
+            </div>
+            <i class="material-icons">more_horiz</i>
         </div>
+        <div id="trend-item">
+            <div class="trend-info">
+                <p>Trending in South Africa</p>
+                <h5>#codingSchool</h5>
+            </div>
+            <i class="material-icons">more_horiz</i>
+        </div>
+
     </div>
 
-    <div class="divider"></div>
+    </div>
 
-    <div id="tweets-container">  </div>
+    <!-- trending page -->
 
-    <!-- Example Tweet -->
-    <div class="tweet">
-        <img src="./assets/profile.jpg" alt="profile">
-        <div class="tweet-content">
-            <div class="tweet-header">
-                <h4>Wandile Gola</h4>
-                <span>@Wara_Gola · 2h</span>
-            </div>
-            <p>
-                Just built my Twitter clone layout using HTML, CSS & JavaScript 
-               <br>
-                #coding journey continues.
-            </p>
-            <div class="tweet-actions">
-                <i class="material-icons" >chat_bubble_outline</i>
-                <i class="material-icons">repeat</i>
-                <i class="material-icons" id="like">favorite_border</i>
-                <i class="material-icons">publish</i>
-            </div>
-        </div>
-      </div>
-      <div class="tweet">
-          <img src="data:image/webp;base64,UklGRsQEAABXRUJQVlA4ILgEAACQKACdASrWAOoAPp1MoEylpCMiI1MZ6LATiWdu4Wjw+H2tAkLC9UfNv6h7+fS2l3ji/Yp2YyyogYhzlRc+qoL5TPrK/agcKqqqqqqqqqqqqqqqqqqqkvE+bDFVNhMmNyURYr1hnXH0L+bXw5oD14nPFUud3QlwHQxgTp3vT6nVt0rX5tqlU3FcURepqR3wAH5lmLbvH9YVcK5cAem3FVF89CMNbEA40t1Ubh0z/kV4LNB8hpojJMTPFtmfa24UxR3WkTlS0jpfnPOr10JVuxJJu85hruvWugdyQAphgcWz1RGxoVP/ItGulRXyg6R8Ko3gI0zONNd8e72lm9P9RMuWvwlL4oAuOJg21Fc6g2HQeQheQiBcz11nipxBb+sIr1cB7oe+m2BJxECNi+i6wvY1hoyXbIxSEMGThjAA1hosWKqqqqqqqqqqqqqqo4AA/v1oIAAANBFUPOSyyh55BJQvdTcwHdecov2d8vFHXpDIdM5tQAK4J9MDD1nlM/kUF+0rKJlApEPLFOX6vwjW/a1Q/+GqYIV7v4wq9gO7AIrsy3ReSCh3tVty7HbsXMiSoRO0x356gL5ZwFh2TMiN9Wf6j2IguonrZcE2kZAiaXkbacBBqomdWzyMOEzFLo75NXq1PPMvlRcANMW8OhK33c8n4/EvKXOsUxtgqd2C8yvAK+WjW4MRl2F/qsOvWa443XtbKzMLYeMYYOjlcBo0pRMt+y7XUcDDVPt8q1zRKW3gmoKM4b/+OkYxq9Wf8IVMuDajDbk4f02mJkWLEUxgAQ95ZeqFl8wdoBos6FbzCygFGHYjZbbxcsCQhS44tZb7Beovep+6NaUAtJqhQbfVNIs0q//kp8CgZuh0T2+Qs69SXAaTdM3pqHczK64QwH9XxDJ5YVW6bZI/cVWzxPbQ8vJz5YhIWxOFGroSgzciFif0vCq2Rl15IaojJD/SpvTnQn8XwxJXshdAgBDwz7pZsAZ4vF26R7vNTguYjjxvcplwLTBVpz8epZFWMax+eYaV9nn4Yn/ABzT5db/YmdynxNUO2RExxxLY/E1fQKvA7mzSbivyBbIAx2lBXzYeKe70cl+8JX0p2IyEqzwx4qUs/AR+9b8ZUQckjV27psMMi9Qvy5ya/q9dbuMRXfiy4P2ZOhzkYh99dSzLQUe3Cn9P/3uznA6B1aQAcbdoCg9i327yVAer4MDP+B/VUvEPJUcgl/SV2YPqE6NBtHgbkxS7j4dCQ49SgPsGRkpugwZbFSuVD8iss4O+wq8ZgmZFiQ4QfkyxvVDKPrzeSFxNAG3twpRTtET8X43MCmlRfUaZtPp8JOQpM6IbTFdeB7V8STrvbV9qFxlHieGj3H0QIBHRj/7Ntofn5Re0quaiTCfXX0LvfvYIKC9tdZ3HbR1/Od74NQCZNqKEBzgIz6ih4QIP7uuqTaJLrjLYFlEj/RJr3gfubP17EM3WKkRYvve5rKJ/AbNImOZ5nAKHMcQhaC9d7FtgJ9G1pHgAAsgDc/cEauGhOtJvHj+i6f2aop4H6f2Ch5zuLVVT8HznDwTBrUWcoOZ93agi3ZU7M9S8HswovX0QMYbtAkTAu+7NjSM1OXqtVggAPzQAAAAAAA==" alt="profile">
-          <div class="tweet-content">
-              <div class="tweet-header">
-                  <h4>Zaio institute of Technology</h4>
-                  <span>@zaiotech · 1h</span>
-                </div>
-                <p>
-                    Who here is working AND studying tech? <br>
-                    Late nights. Early mornings. Weekend study sessions. It’s not easy. <br>
-                    But learning while balancing responsibilities shows serious determination. <br>
-                    If you’re doing both, what’s been your biggest challenge?
-                </p>
-                <div class="tweet-actions">
-                    <i class="material-icons">chat_bubble_outline</i>
-                    <i class="material-icons">repeat</i>
-                    <i class="material-icons" id="like" >favorite_border</i>
-                    <i class="material-icons">publish</i>
-                </div>
-            </div>
-        </div>
-        <div class="tweet">
-          <img src="https://th.bing.com/th/id/OIP.lqCn-kJTjtp0UTItRp5SowHaHa?w=196&h=196&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" alt="profile">
-        <div class="tweet-content">
-            <div class="tweet-header">
-                <h4>Coding</h4>
-                <span>@Codex · Jan 20</span>
-            </div>
-            <p>
-                so i recently started iOS development and can't find some good resources to deep dive into that. Anyone having good experiences with some iOS devs, connect. 
-                #ios #developer #coding
-            </p>
-            <div class="tweet-actions">
-                <i class="material-icons">chat_bubble_outline</i>
-                <i class="material-icons">repeat</i>
-                <i class="material-icons" id="like">favorite_border</i>
-                <i class="material-icons">publish</i>
-            </div>
-        </div>
-      </div>
-      <div class="tweet">
-        <img src="https://th.bing.com/th/id/OIP.QX1Eo_wRI6a1pCuTA2XMoAHaHa?w=144&h=150&c=6&o=7&dpr=1.3&pid=1.7&rm=3" alt="profile">
-        <div class="tweet-content">
-            <div class="tweet-header">
-                <h4>Wandile Gola</h4>
-                <span>@Wara_Gola · Feb 14</span>
-            </div>
-            <p>
-                Today’s class was 🔥 <br>
-                <br>
-                Learned about: <br>
-                ✅ JavaScript Execution Context <br>
-                ✅ How JS works under the hood <br>
-                ✅ Main Thread <br>
-                ✅ Code execution flow <br>
-                <br>
-                Slowly building strong fundamentals 💪🚀
-            </p>
-            <div class="tweet-actions">
-                <i class="material-icons">chat_bubble_outline</i>
-                <i class="material-icons">repeat</i>
-                <i class="material-icons" id="like">favorite_border</i>
-                <i class="material-icons">publish</i>
-            </div>
-        </div>
-      </div>
-      <div class="tweet">
-        <img src="https://th.bing.com/th/id/OIP.Bo-Le5RE7kb9PjwqJQAqYAHaHa?w=146&h=150&c=6&o=7&dpr=1.3&pid=1.7&rm=3" alt="profile">
-        <div class="tweet-content">
-            <div class="tweet-header">
-                <h4>GitHub Status</h4>
-                <span>@githubstatus · Feb 08</span>
-            </div>
-            <p>
-                Actions is experiencing capacity constraints with larger hosted runners, leading to high wait times. Standard hosted labels and self-hosted runners are not impacted.  The issue is mitigated and we are monitoring recovery.
-                
-            </p>
-            <div class="tweet-actions">
-                <i class="material-icons">chat_bubble_outline</i>
-                <i class="material-icons">repeat</i>
-                <i class="material-icons" id="like">favorite_border</i>
-                <i class="material-icons">publish</i>
-            </div>
-        </div>
-      </div>
-      <div class="tweet">
-        <img src="https://th.bing.com/th/id/OIP.cVcFuxFJIcj1Bo2sxc3h-QHaIV?w=155&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" alt="profile">
-        <div class="tweet-content">
-            <div class="tweet-header">
-                <h4>Wandile Gola</h4>
-                <span>@Wara_Gola · 12h</span>
-            </div>
-            <p>
-                The Netlify Creator Program is live! Pitch a blog post or video about shipping with AI (or how you build on Netlify). 
-            </p>
-            <div class="tweet-actions">
-                <i class="material-icons">chat_bubble_outline</i>
-                <i class="material-icons">repeat</i>
-                <i class="material-icons" id="like">favorite_border</i>
-                <i class="material-icons">publish</i>
-            </div>
-        </div>
-      </div>
-      <div class="tweet">
-        <img src="./assets/profile.jpg" alt="profile">
-        <div class="tweet-content">
-            <div class="tweet-header">
-                <h4>Wandile Gola</h4>
-                <span>@Wara_Gola · 1 Day</span>
-            </div>
-            <p>
-                We're continuing to work toward mitigation with our capacity provider, and adding capacity.
-            </p>
-            <div class="tweet-actions">
-                <i class="material-icons">chat_bubble_outline</i>
-                <i class="material-icons">repeat</i>
-                <i class="material-icons" id="like">favorite_border</i>
-                <i class="material-icons">publish</i>
-            </div>
-        </div>
-      </div>
 
-     </div>
+    <!--news page-->
+    
 
-    <div class="right-sidebar">
+    <!-- sports page -->
+    </div>
+
+
+        <!-- right sidebar -->
+        <div class="right-sidebar">
             <div class="search-box">
         <input type="text" placeholder="Search">
     </div>
 
-    <div class="trends">
+    <div id="trends">
         <div class="trends-header">
-            <h4>Trends for you</h4>
-            <i class="material-icons settings-icon">settings</i>
+            <h4>Today's News</h4>
         </div>
 
-        <div class="trend-item">
+        <div id="trend-item">
             <div class="trend-info">
-                <p>Trending in SA</p>
-                <h5>Wandile Gola</h5>
-                <p>@Wara_Gola</p>
+                <h5>Python Updates. Keeps you updated on what's happening in the world of Python. Created By...</h5>
+                <p>3 hours ago · Tech · 3,453 posts</p>
             </div>
-            <i class="material-icons">more_horiz</i>
         </div>
-        <div class="trend-item">
+        <div id="trend-item">
             <div class="trend-info">
-                <p>Trending in SA</p>
-                <h5>Wandile Gola</h5>
-                <p>@Wara_Gola</p>
+                <h5>Progressive HTML and CSS framework for building responsive landing pages.</h5>
+                <p>6 hours ago · Tech · 2,193 posts</p>
             </div>
-            <i class="material-icons">more_horiz</i>
         </div>
-        <div class="trend-item">
+        <div id="trend-item">
             <div class="trend-info">
-                <p>Trending in SA</p>
-                <h5>Wandile Gola</h5>
-                <p>@Wara_Gola</p>
+                <h5>Check out this Zaio Tech Bootcamp </h5>
+                <p>12 hours ago · Tech · 992 posts</p>
             </div>
-            <i class="material-icons">more_horiz</i>
         </div>
-        <div class="trend-item">
+        <div id="trend-item">
             <div class="trend-info">
                 <p>Trending in SA</p>
                 <h5>Wandile Gola</h5>
                 <p>@Wara_Gola</p>
             </div>
-            <i class="material-icons">more_horiz</i>
         </div>
         
     </div>
 
-    <div class="who-to-follow">
+    <div id="who-to-follow">
 
     <h4>Who to follow</h4>
 
@@ -355,137 +243,35 @@
             <a href="#">Accessibility</a>
             <a href="#">Ads info</a>
             <a href="#">More</a>
-            <span>© 2026 Wandile Corp.</span>
+            <span>© 2026 X Corp.</span>
         </div>
 
     </div>
-    </div>
-    </div>
-        </div>
-        <div class="bottom-nav">
-        <i class="material-icons">home_filled</i>
-        <i class="material-icons">search</i>
-        <i class="material-icons">notifications_none</i>
-        <i class="material-icons">mail_outline</i>
-        <i class="material-icons">person_outline</i>
-    </div>
-    <div class="tweet-modal" id="tweetModal">
-    <div class="modal-content">
-        <div class="modal-header">
-            <i class="material-icons close-btn" id="closeModal">close</i>
-        </div>
 
-        <div class="modal-body">
-            <img src="./assets/profile.jpg" alt="profile">
-
-            <div class="modal-input">
-                <input type="text" id="modalTweetInput" placeholder="What's happening?">
-                <button class="tweet-btn" id="modalTweetBtn">Tweet</button>
-            </div>
-        </div>
     </div>
+
 </div>
 <script>
-const modal = document.getElementById("tweetModal");
-const openBtn = document.querySelector(".post-btn");
-const closeBtn = document.getElementById("closeModal");
-const modalInput = document.getElementById("modalTweetInput");
-const modalTweetBtn = document.getElementById("modalTweetBtn");
-const feed = document.querySelector(".feed");
+const tabs = document.querySelectorAll(".explore-tab");
+const contents = document.querySelectorAll(".explore-content");
 
-// Open Modal
-openBtn.addEventListener("click", () => {
-    modal.classList.add("active");
-    document.body.style.overflow = "hidden";
+tabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+
+        // Remove active class
+        tabs.forEach(t => t.classList.remove("active-explore"));
+        tab.classList.add("active-explore");
+
+        // Hide all content
+        contents.forEach(content => content.classList.add("hidden"));
+
+        // Show selected content
+        const target = tab.getAttribute("data-tab");
+        document.getElementById(target).classList.remove("hidden");
+
+    });
 });
-
-// Close Modal
-function closeModal() {
-    modal.classList.remove("active");
-    document.body.style.overflow = "auto";
-}
-
-closeBtn.addEventListener("click", closeModal);
-
-modal.addEventListener("click", (e) => {
-    if (e.target === modal) {
-        closeModal();
-    }
-});
-
-// Create Tweet
-modalTweetBtn.addEventListener("click", () => {
-
-    const tweetText = modalInput.value.trim();
-
-    if (tweetText === "") return;
-
-    const newTweet = document.createElement("div");
-    newTweet.classList.add("tweet");
-
-    newTweet.innerHTML = `
-        <img src="./assets/profile.jpg" alt="profile">
-        <div class="tweet-content">
-            <div class="tweet-header">
-                <h4>Wandile Gola</h4>
-                <span>@Wara_Gola · Just now</span>
-            </div>
-            <p>${tweetText}</p>
-            <div class="tweet-actions">
-                <i class="material-icons">chat_bubble_outline</i>
-                <i class="material-icons">repeat</i>
-                <i class="material-icons">favorite_border</i>
-                <i class="material-icons">publish</i>
-            </div>
-        </div>
-    `;
-
-    // Insert at top (after header & tweet box)
-    feed.insertBefore(newTweet, feed.children[3]);
-
-    modalInput.value = "";
-    closeModal();
-});
-
-const tweetBtn = document.querySelector("#feedTweetBtn");
-const tweetInput = document.querySelector(".tweet-input input");
-const tweetsContainer = document.getElementById("tweets-container");
-
-tweetBtn.addEventListener("click", function () {
-
-    const tweetText = tweetInput.value.trim();
-
-    if (tweetText === "") return;
-
-    const newTweet = document.createElement("div");
-    newTweet.classList.add("tweet");
-
-    newTweet.innerHTML = `
-        <img src="./assets/profile.jpg" alt="profile">
-        <div class="tweet-content">
-            <div class="tweet-header">
-                <h4>You</h4>
-                <span>@you · Just now</span>
-            </div>
-            <p>${tweetText}</p>
-            <div class="tweet-actions">
-                <i class="far fa-comment"></i>
-                <i class="fas fa-retweet"></i>
-                <i class="far fa-heart"></i>
-                <i class="fas fa-chart-bar"></i>
-            </div>
-        </div>
-    `;
-
-    tweetsContainer.prepend(newTweet);
-
-    tweetInput.value = "";
-});
-
 </script>
 
 </body>
-
 </html>
-
- 
